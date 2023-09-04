@@ -32,13 +32,13 @@ export const ContextProvider = ({ children }: { children: React.ReactNode }) => 
     const [products, setProducts] = useState<Product[]>([])
     const [selectedProd, setSelectedProd] = useState<Product | null>(null)
     const loadProducts = async() =>{
-        const res = await fetch("api/products")
+        const res = await fetch("https://toop-final.vercel.app/api/products")
         const data = await res.json()
         setProducts(data)
 
     }
     const createProduct = async(product: createProduct) =>{
-        const res = await fetch("api/products",{
+        const res = await fetch("https://toop-final.vercel.app/api/products",{
             method: "POST",
             body: JSON.stringify(product),
             headers: {
@@ -51,7 +51,7 @@ export const ContextProvider = ({ children }: { children: React.ReactNode }) => 
     }
 
     const deleteProduct = async(id: number) =>{
-        const res = await fetch("api/products/" + id,{
+        const res = await fetch("https://toop-final.vercel.app/api/products/" + id,{
             method: "DELETE"
         })
         const data = res.json()
@@ -59,7 +59,7 @@ export const ContextProvider = ({ children }: { children: React.ReactNode }) => 
     }
 
     const updateProduct = async(id: number, product: updateProduct) =>{
-        const res = await fetch("api/products/" + id, {
+        const res = await fetch("https://toop-final.vercel.app/api/products/" + id, {
             method: "PUT",
             body: JSON.stringify(product),
             headers: {
