@@ -122,6 +122,7 @@ export const ProductForm = () =>{
                         setPrice(0)
                     }}
                     variant={'outline'}
+                    colorScheme="red"
                     >
                         Cancelar
                     </Button>
