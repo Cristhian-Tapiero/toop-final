@@ -11,6 +11,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
+      <head>
+        <link
+            rel="icon"
+            href="/icon?<generated>"
+            type="image/<generated>"
+            sizes="<generated>"
+          />
+      </head>
       <body>
         <Providers>
           {children}
