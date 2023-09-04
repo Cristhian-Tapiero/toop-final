@@ -107,7 +107,9 @@ export const ProductForm = () =>{
             mt={'1rem'}
             >
                 <Button
-                type='submit'>
+                type='submit'
+                variant={'outline'}
+                >
                     {selectedProd ? "Actualizar" : "Guardar"}
                 </Button>
                 {selectedProd &&
@@ -119,6 +121,7 @@ export const ProductForm = () =>{
                         setStock(0)
                         setPrice(0)
                     }}
+                    variant={'outline'}
                     >
                         Cancelar
                     </Button>
